@@ -1,7 +1,12 @@
+// Color Variables
+$DarkBlue: hsl(240, 38%, 20%);
+$GreyBlue: hsl(240, 18%, 77%);
+$White: #ffffff;
+
 body {
     font-size: 32px;
     font-family: "Inter", sans-serif;
-    background: #1E1A1D;
+    background: #1e1a1d;
 
     .slider {
         position: absolute;
@@ -10,7 +15,11 @@ body {
         transform: translate(-50%, -50%);
         width: 1200px;
         height: 600px;
-        background: lightcoral;
+        background: $White;
+        background-image: url(../images/pattern-curve.svg), url(../images/pattern-bg.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: left bottom, right;
+        background-size: auto, contain;
 
         .slide {
             max-width: 100%;
@@ -20,32 +29,117 @@ body {
             .content {
                 position: absolute;
                 top: 50%;
-                left: 10%;
+                left: 5%;
                 transform: translateY(-50%);
                 z-index: 1;
-                width: 610px;
+                width: 650px;
+
+                img.quotes {
+                    position: absolute;
+                    top: -30px;
+                    left: 100px;
+                }
 
                 p {
                     font-weight: 300;
-                    margin-bottom: .5rem;
+                    color: $DarkBlue;
+                    margin-bottom: 0.5rem;
                 }
 
                 small {
+                    font-size: 1.1rem;
                     font-weight: 700;
+                    color: $DarkBlue;
 
                     span {
                         font-weight: 300;
                         margin-left: 5px;
+                        color: $GreyBlue;
                     }
                 }
             }
 
-            img {
+            img.person {
                 position: absolute;
                 top: 50%;
                 right: 5%;
                 transform: translateY(-50%);
                 width: 500px;
+                box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            .buttons {
+                position: absolute;
+                bottom: 5%;
+                right: 30%;
+                background: $White;
+                border-radius: 30px;
+                box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .prev {
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    height: 48px;
+                    width: 52px;
+                    position: relative;
+                    top: 4px;
+
+                    &:hover,
+                    &:focus {
+                        outline: none;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        img {
+                            right: 5px;
+                        }
+                    }
+
+                    img {
+                        padding: 15px 20px;
+                        position: relative;
+                        right: 0;
+                        transition: all ease-in-out .2s;
+                    }
+                }
+
+                .next {
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    height: 48px;
+                    position: relative;
+                    top: 4px;
+
+                    &:hover,
+                    &:focus {
+                        outline: none;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        img {
+                            left: 5px;
+                        }
+                    }
+
+                    img {
+                        padding: 15px 20px;
+                        position: relative;
+                        left: 0;
+                        transition: all ease-in-out .2s;
+                    }
+                }
             }
         }
     }

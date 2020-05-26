@@ -1,7 +1,7 @@
 body {
   font-size: 32px;
   font-family: "Inter", sans-serif;
-  background: #1E1A1D;
+  background: #1e1a1d;
 }
 body .slider {
   position: absolute;
@@ -10,7 +10,11 @@ body .slider {
   transform: translate(-50%, -50%);
   width: 1200px;
   height: 600px;
-  background: lightcoral;
+  background: #ffffff;
+  background-image: url(../images/pattern-curve.svg), url(../images/pattern-bg.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right;
+  background-size: auto, contain;
 }
 body .slider .slide {
   max-width: 100%;
@@ -20,28 +24,96 @@ body .slider .slide {
 body .slider .slide .content {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 5%;
   transform: translateY(-50%);
   z-index: 1;
-  width: 610px;
+  width: 650px;
+}
+body .slider .slide .content img.quotes {
+  position: absolute;
+  top: -30px;
+  left: 100px;
 }
 body .slider .slide .content p {
   font-weight: 300;
+  color: #202046;
   margin-bottom: 0.5rem;
 }
 body .slider .slide .content small {
+  font-size: 1.1rem;
   font-weight: 700;
+  color: #202046;
 }
 body .slider .slide .content small span {
   font-weight: 300;
   margin-left: 5px;
+  color: #babacf;
 }
-body .slider .slide img {
+body .slider .slide img.person {
   position: absolute;
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
   width: 500px;
+  box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+}
+body .slider .slide .buttons {
+  position: absolute;
+  bottom: 5%;
+  right: 30%;
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+}
+body .slider .slide .buttons:hover {
+  cursor: pointer;
+}
+body .slider .slide .buttons .prev {
+  background: none;
+  border: none;
+  padding: 0;
+  height: 48px;
+  width: 52px;
+  position: relative;
+  top: 4px;
+}
+body .slider .slide .buttons .prev:hover, body .slider .slide .buttons .prev:focus {
+  outline: none;
+  cursor: pointer;
+}
+body .slider .slide .buttons .prev:hover img {
+  right: 5px;
+}
+body .slider .slide .buttons .prev img {
+  padding: 15px 20px;
+  position: relative;
+  right: 0;
+  transition: all ease-in-out 0.2s;
+}
+body .slider .slide .buttons .next {
+  background: none;
+  border: none;
+  padding: 0;
+  height: 48px;
+  position: relative;
+  top: 4px;
+}
+body .slider .slide .buttons .next:hover, body .slider .slide .buttons .next:focus {
+  outline: none;
+  cursor: pointer;
+}
+body .slider .slide .buttons .next:hover img {
+  left: 5px;
+}
+body .slider .slide .buttons .next img {
+  padding: 15px 20px;
+  position: relative;
+  left: 0;
+  transition: all ease-in-out 0.2s;
 }
 
 /*# sourceMappingURL=main.css.map */
