@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('.buttons .next').click(function () {
-        $('.slide .content p').animate('left', '-150%');
+    $('.slider').slick({
+        nextArrow: '.next',
+        prevArrow: '.prev'
     });
 });
