@@ -6,7 +6,7 @@ $White: #ffffff;
 body {
     font-size: 32px;
     font-family: "Inter", sans-serif;
-    background: #1e1a1d;
+    background: $White;
 
     .slider {
         position: absolute;
@@ -16,28 +16,37 @@ body {
         width: 1200px;
         height: 600px;
         background: $White;
-        background-image: url(../images/pattern-curve.svg), url(../images/pattern-bg.svg);
-        background-repeat: no-repeat, no-repeat;
-        background-position: left bottom, right;
-        background-size: auto, contain;
+        padding: 15px;
+        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+        background-image: url(../images/pattern-curve.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: auto;
 
         .slide {
             max-width: 100%;
             width: 100%;
             height: 100%;
+            background-image: url(../images/pattern-bg.svg);
+            background-repeat: no-repeat, no-repeat;
+            background-position: right;
+            background-size: contain;
 
             .content {
                 position: absolute;
                 top: 50%;
-                left: 5%;
+                left: 10%;
                 transform: translateY(-50%);
                 z-index: 1;
                 width: 650px;
 
                 img.quotes {
                     position: absolute;
-                    top: -30px;
+                    top: -20px;
                     left: 100px;
+                    width: 100px;
                 }
 
                 p {
@@ -62,9 +71,9 @@ body {
             img.person {
                 position: absolute;
                 top: 50%;
-                right: 5%;
+                right: 10%;
                 transform: translateY(-50%);
-                width: 500px;
+                width: 450px;
                 box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
                 -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
                 -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
@@ -72,7 +81,7 @@ body {
 
             .buttons {
                 position: absolute;
-                bottom: 5%;
+                bottom: 10%;
                 right: 30%;
                 background: $White;
                 border-radius: 30px;
@@ -80,18 +89,15 @@ body {
                 -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
                 -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
 
-                &:hover {
-                    cursor: pointer;
-                }
-
                 .prev {
                     background: none;
                     border: none;
                     padding: 0;
                     height: 48px;
-                    width: 52px;
+                    width: 60px;
                     position: relative;
                     top: 4px;
+                    margin-right: 10px;
 
                     &:hover,
                     &:focus {
@@ -109,7 +115,7 @@ body {
                         padding: 15px 20px;
                         position: relative;
                         right: 0;
-                        transition: all ease-in-out .2s;
+                        transition: all ease-in-out 0.2s;
                     }
                 }
 
@@ -118,8 +124,10 @@ body {
                     border: none;
                     padding: 0;
                     height: 48px;
+                    width: 60px;
                     position: relative;
                     top: 4px;
+                    margin-left: 10px;
 
                     &:hover,
                     &:focus {
@@ -137,7 +145,7 @@ body {
                         padding: 15px 20px;
                         position: relative;
                         left: 0;
-                        transition: all ease-in-out .2s;
+                        transition: all ease-in-out 0.2s;
                     }
                 }
             }
