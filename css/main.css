@@ -1,23 +1,144 @@
-body {
+@font-face {
+  font-family: "Inter Light";
+  src: url("../fonts/Inter-Light.ttf");
+}
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../fonts/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../fonts/Inter-Bold.ttf");
+}
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+html {
+  height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+html body {
   font-size: 32px;
-  font-family: "Inter", sans-serif;
   background: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
-body .main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1200px;
-  height: 600px;
-}
-body .main .slider {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+html body .main {
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+html body .main .slider {
+  overflow: hidden;
+  width: 1200px;
+  height: 600px;
   background: #ffffff;
   background-image: url(../images/patterN-curve.svg), url(../images/pattern-bg.svg);
   background-repeat: no-repeat, no-repeat;
@@ -27,73 +148,84 @@ body .main .slider {
   -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
 }
-body .main .slider:focus {
+html body .main .slider:focus {
   outline: none;
 }
-body .main .slider .slick-track,
-body .main .slider .slick-list {
-  height: 100%;
+html body .main .slider .slick-track,
+html body .main .slider .slick-list {
+  height: 600px;
+  width: 1200px;
 }
-body .main .slider .slick-track:focus,
-body .main .slider .slick-list:focus {
+html body .main .slider .slick-track:focus,
+html body .main .slider .slick-list:focus {
   outline: none;
 }
-body .main .slider .slide {
+html body .main .slider .slide {
   position: relative;
+  height: 600px;
+  width: 1200px;
 }
-body .main .slider .slide:focus {
+html body .main .slider .slide:focus {
   outline: none;
 }
-body .main .slider .content {
+html body .main .slider .content {
   position: relative;
   top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
+  left: 12%;
+  display: block;
+  float: left;
+  transform: translate(-12%, -50%);
   z-index: 1;
   width: 650px;
+  overflow: hidden;
 }
-body .main .slider .content img.quotes {
+html body .main .slider .content img.quotes {
   position: absolute;
-  top: -20px;
   left: 100px;
   width: 100px;
 }
-body .main .slider .content p {
-  font-weight: 300;
+html body .main .slider .content p {
+  font-family: "Inter Light", sans-serif;
   color: #202046;
   margin-bottom: 0.5rem;
 }
-body .main .slider .content small {
+html body .main .slider .content small {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-family: "Inter Bold", sans-serif;
   color: #202046;
 }
-body .main .slider .content small span {
-  font-weight: 300;
+html body .main .slider .content small span {
+  font-family: "Inter Medium", sans-serif;
   margin-left: 5px;
   color: #babacf;
 }
-body .main .slider img.person {
-  position: absolute;
+html body .main .slider .person {
+  float: right;
+  width: 480px;
+  height: 480px;
+  position: relative;
   top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
-  width: 450px;
+  right: 5%;
+  transform: translate(-5%, -50%);
+  overflow: hidden;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
 }
-body .buttons {
+html body .main .slider .person img {
+  width: 100%;
+}
+html body .buttons {
   position: absolute;
-  bottom: 10%;
-  right: 30%;
+  bottom: 20%;
+  right: 35%;
   background: #ffffff;
   border-radius: 30px;
   box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
 }
-body .buttons .prev {
+html body .buttons .prev {
   position: relative;
   top: -2px;
   right: 0;
@@ -101,12 +233,12 @@ body .buttons .prev {
   margin: 5px 20px;
   transition: all ease-in-out 0.2s;
 }
-body .buttons .prev:hover, body .buttons .prev:focus {
+html body .buttons .prev:hover, html body .buttons .prev:focus {
   outline: none;
   cursor: pointer;
   right: 5px;
 }
-body .buttons .next {
+html body .buttons .next {
   position: relative;
   top: -2px;
   left: 0;
@@ -114,7 +246,7 @@ body .buttons .next {
   margin: 5px 20px;
   transition: all ease-in-out 0.2s;
 }
-body .buttons .next:hover, body .buttons .next:focus {
+html body .buttons .next:hover, html body .buttons .next:focus {
   outline: none;
   cursor: pointer;
   left: 5px;
