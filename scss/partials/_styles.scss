@@ -21,28 +21,20 @@ html {
         height: calc(var(--vh, 1vh) * 100);
 
         .main {
-            display: -webkit-flexbox;
-            display: -ms-flexbox;
-            display: -webkit-flex;
             display: flex;
-            -webkit-flex-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
             width: 100%;
-            height: 100%;
-            height: 100vh;
-            height: calc(var(--vh, 1vh) * 100);
 
             .slider {
                 overflow: hidden;
-                width: 1200px;
+                width: 100%;
                 height: 600px;
                 background: $White;
                 background-image: url(../images/patterN-curve.svg), url(../images/pattern-bg.svg);
                 background-repeat: no-repeat, no-repeat;
-                background-position: left bottom, 550px;
+                background-position: left bottom, 500px;
                 background-size: 500px, 600px;
                 box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
                 -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
@@ -55,7 +47,7 @@ html {
                 .slick-track,
                 .slick-list {
                     height: 600px;
-                    width: 1200px;
+                    width: 100%;
 
                     &:focus {
                         outline: none;
@@ -65,7 +57,7 @@ html {
                 .slide {
                     position: relative;
                     height: 600px;
-                    width: 1200px;
+                    width: 100%;
 
                     &:focus {
                         outline: none;
@@ -73,20 +65,20 @@ html {
                 }
 
                 .content {
-                    position: relative;
                     top: 50%;
-                    left: 12%;
+                    left: 10%;
+                    position: relative;
                     display: block;
                     float: left;
-                    transform: translate(-12%, -50%);
+                    transform: translate(-10%, -50%);
                     z-index: 1;
                     width: 650px;
-                    overflow: hidden;
 
                     img.quotes {
                         position: absolute;
                         left: 100px;
                         width: 100px;
+                        top: -40px;
                     }
 
                     p {
@@ -109,20 +101,21 @@ html {
                 }
 
                 .person {
-                    float: right;
-                    width: 480px;
-                    height: 480px;
-                    position: relative;
+                    width: 450px;
+                    height: 450px;
                     top: 50%;
                     right: 5%;
-                    transform: translate(-5%, -50%);
+                    position: relative;
+                    display: block;
+                    float: right;
+                    transform: translateY(-50%);
                     overflow: hidden;
-                    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
-                    -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
-                    -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
 
                     img {
                         width: 100%;
+                        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                        -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                        -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
                     }
                 }
             }
@@ -131,19 +124,22 @@ html {
         .buttons {
             position: absolute;
             bottom: 20%;
-            right: 35%;
+            right: 30%;
             background: $White;
             border-radius: 30px;
             box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
             -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
             -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+            height: 48px;
 
             .prev {
                 position: relative;
-                top: -2px;
+                top: -10px;
                 right: 0;
                 display: inline-block;
-                margin: 5px 20px;
+                margin: 5px 10px;
+                width: 30px;
+                text-align: center;
                 transition: all ease-in-out 0.2s;
 
                 &:hover,
@@ -156,10 +152,12 @@ html {
 
             .next {
                 position: relative;
-                top: -2px;
+                top: -10px;
                 left: 0;
                 display: inline-block;
-                margin: 5px 20px;
+                margin: 5px 10px;
+                width: 30px;
+                text-align: center;
                 transition: all ease-in-out 0.2s;
 
                 &:hover,
