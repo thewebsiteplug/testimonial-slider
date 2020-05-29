@@ -222,32 +222,26 @@ html body .buttons {
 html body .buttons .prev {
   position: relative;
   top: -10px;
-  right: 0;
   display: inline-block;
   margin: 5px 10px;
   width: 30px;
   text-align: center;
-  transition: all ease-in-out 0.2s;
 }
 html body .buttons .prev:hover, html body .buttons .prev:focus {
   outline: none;
   cursor: pointer;
-  right: 5px;
 }
 html body .buttons .next {
   position: relative;
   top: -10px;
-  left: 0;
   display: inline-block;
   margin: 5px 10px;
   width: 30px;
   text-align: center;
-  transition: all ease-in-out 0.2s;
 }
 html body .buttons .next:hover, html body .buttons .next:focus {
   outline: none;
   cursor: pointer;
-  left: 5px;
 }
 
 @media (max-width: 575.98px) {
@@ -270,7 +264,7 @@ html body .main .slider .slick-list {
     transform: translate(0, 0);
   }
   html body .main .slider .content p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   html body .main .slider .content small {
     font-size: 1rem;
@@ -286,7 +280,7 @@ html body .main .slider .slick-list {
     top: 0;
     right: 0;
     transform: translateY(0);
-    padding: 15px;
+    padding: 5px;
   }
   html body .main .slider .person img {
     box-shadow: 0 0 0 0;
@@ -294,8 +288,8 @@ html body .main .slider .slick-list {
     -webkit-box-shadow: 0 0 0 0;
   }
   html body .buttons {
-    bottom: 5%;
-    right: 41%;
+    bottom: 13%;
+    right: 38%;
   }
 }
 

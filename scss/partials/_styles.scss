@@ -135,36 +135,30 @@ html {
             .prev {
                 position: relative;
                 top: -10px;
-                right: 0;
                 display: inline-block;
                 margin: 5px 10px;
                 width: 30px;
                 text-align: center;
-                transition: all ease-in-out 0.2s;
 
                 &:hover,
                 &:focus {
                     outline: none;
                     cursor: pointer;
-                    right: 5px;
                 }
             }
 
             .next {
                 position: relative;
                 top: -10px;
-                left: 0;
                 display: inline-block;
                 margin: 5px 10px;
                 width: 30px;
                 text-align: center;
-                transition: all ease-in-out 0.2s;
 
                 &:hover,
                 &:focus {
                     outline: none;
                     cursor: pointer;
-                    left: 5px;
                 }
             }
         }
