@@ -5,7 +5,7 @@
             .main {
                 .slider {
                     padding: 30px;
-                    height: 100%;
+                    min-height: 100vh;
                     background-image: none;
 
                     .slick-track,

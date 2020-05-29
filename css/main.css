@@ -247,7 +247,7 @@ html body .buttons .next:hover, html body .buttons .next:focus {
 @media (max-width: 575.98px) {
   html body .main .slider {
     padding: 30px;
-    height: 100%;
+    min-height: 100vh;
     background-image: none;
   }
   html body .main .slider .slick-track,
