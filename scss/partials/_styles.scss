@@ -2,3 +2,119 @@
 $DarkBlue: hsl(240, 38%, 20%);
 $GreyBlue: hsl(240, 18%, 77%);
 $White: #ffffff;
+
+html {
+    overflow-y: scroll;
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        .page-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 1200px;
+            margin: 0 auto;
+
+            .testimonials-slider {
+                background-image: url(../images/patterN-curve.svg), url(../images/pattern-bg.svg);
+                background-repeat: no-repeat, no-repeat;
+                background-position: left bottom, 570px;
+                background-size: 500px, 600px;
+                box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                padding: 50px;
+
+                .testimonial {
+                    display: flex;
+                    align-items: center;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    .information {
+                        width: 700px;
+                        float: left;
+                        position: relative;
+                        left: 5%;
+                        z-index: 1;
+
+                        p {
+                            font-family: "Inter Light", sans-serif;
+                            font-size: 32px;
+                            line-height: 1.2;
+                            color: $DarkBlue;
+                        }
+
+                        small {
+                            font-family: "Inter Bold", sans-serif;
+                            font-size: 20px;
+                            color: $DarkBlue;
+
+                            p {
+                                font-family: "Inter Medium", sans-serif;
+                                color: $GreyBlue;
+                                margin-left: 5px;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                    }
+
+                    .headshot {
+                        width: 50%;
+                        float: right;
+                        position: relative;
+                        right: 5%;
+
+                        img {
+                            width: 100%;
+                            box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                            -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                            -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                position: absolute;
+                bottom: 18%;
+                left: 55%;
+                background: $White;
+                border-radius: 30px;
+                box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
+                
+                a {
+                    display: inline-block;
+                    padding: 15px;
+                    line-height: 0;
+                    text-align: center;
+
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                        box-shadow: 0 0 0 0;
+                    }
+                }
+
+                .prev {
+                    margin-right: 10px;
+                }
+
+                .next {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

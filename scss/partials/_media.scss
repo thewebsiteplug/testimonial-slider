@@ -1,5 +1,66 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+    html {
+        body {
+            .page-wrapper {
+                min-height: 100%;
+                width: 100%;
+
+                .testimonials-slider {
+                    padding: 0;
+                    width: 100%;
+
+                    .testimonial {
+                        flex-direction: column-reverse;
+                        padding: 25px;
+
+                        .information {
+                            width: 100%;
+                            left: 0;
+                            text-align: center;
+
+                            p {
+                                font-size: 5vw;
+                            }
+
+                            small {
+                                font-size: 3.5vw;
+
+                                p {
+                                    font-size: 3.2vw;
+                                }
+                            }
+                        }
+
+                        .headshot {
+                            right: 0;
+                            width: 70vw;
+                            padding-bottom: 50px;
+                        }
+                    }
+                }
+
+                .buttons {
+                    top: 70vw;
+                    bottom: auto;
+                    left: auto;
+
+                    .prev {
+                        margin-right: 5px;
+                    }
+
+                    .next {
+                        margin-left: 5px;
+                    }
+                    
+
+                    a {
+                        padding: 3vw;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Small devices (landscape phones, less than 768px)
