@@ -9,6 +9,9 @@
                 .testimonials-slider {
                     padding: 0;
                     width: 100%;
+                    position: fixed;
+                    top: 50%;
+                    transform: translateY(-50%);
 
                     .testimonial {
                         flex-direction: column-reverse;
