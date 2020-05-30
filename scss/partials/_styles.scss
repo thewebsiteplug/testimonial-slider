@@ -30,6 +30,9 @@ html {
                 -moz-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
                 -webkit-box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.25);
                 padding: 50px;
+                position: fixed;
+                top: 50%;
+                transform: translateY(-50%);
 
                 .testimonial {
                     display: flex;
