@@ -146,7 +146,9 @@ html body .page-wrapper .buttons .next {
     font-size: 3.5vw;
   }
   html body .page-wrapper .testimonials-slider .testimonial .information small p {
-    font-size: 3.2vw;
+    font-size: 3.5vw;
+    display: block;
+    margin: 0;
   }
   html body .page-wrapper .testimonials-slider .testimonial .headshot {
     right: 0;
