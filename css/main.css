@@ -121,6 +121,8 @@ html body .page-wrapper .buttons .next {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: 400px;
+    background-position: bottom, center 65px;
   }
   html body .page-wrapper .testimonials-slider .testimonial {
     flex-direction: column-reverse;
